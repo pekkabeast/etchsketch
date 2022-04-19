@@ -12,10 +12,9 @@ body{
 }
 
 .draw {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    height:100%;
+    height:560px;
+    width:560px;
+    margin: auto;
 }
 
 .square{

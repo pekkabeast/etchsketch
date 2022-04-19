@@ -14,6 +14,7 @@ for (let i = 0; i < 16; i++) {
         innerDiv.classList.add('square');
         mainDiv.addEventListener('mousedown', function () {
             innerDiv.addEventListener('mouseover',change)
+            innerDiv.addEventListener('click',change);
         })
         mainDiv.addEventListener('mouseup', function(){
             innerDiv.removeEventListener('mouseover',change)
@@ -29,4 +30,14 @@ for (let i = 0; i < 16; i++) {
 
 function change(){
     this.classList.add('change');
+}
+
+
+const button = document.querySelector('button');
+button.addEventListener('click',clear)
+
+
+function clear(){
+    const divs = document.querySelectorAll('div');
+    divs.forEach((div)=>{div.classList.remove('change')});
 }
